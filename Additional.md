@@ -1,1 +1,1 @@
-# Доп. файл в ветке awesome-feature
+# Доп. файл, который изменен в ветке awesome-feature
