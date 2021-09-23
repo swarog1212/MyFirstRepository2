@@ -1,0 +1,1 @@
+# Доп. файл в ветке awesome-feature
