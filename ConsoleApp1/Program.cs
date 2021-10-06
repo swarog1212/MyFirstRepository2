@@ -6,104 +6,60 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            //string myName = Console.ReadLine();
+
+            /*foreach (var i in myName)
+            {
+                Console.Write("{0} ", i);
+               
+            }
+            Console.WriteLine("Последняя буква вашего имени = {0}", myName[myName.Length - 1]);*/
+            //for (int i = myName.Length - 1; i >= 0; i--)
+            //{
+            //    Console.WriteLine(myName[i]);
+            //}
+            /*int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
+            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            {
+                for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
+                {
+                    Console.Write(array[k, i] + " ");
+                }
+                Console.WriteLine();
+            }*/
+            /*var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int temp = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int k = 0; k < arr.Length - 1; k++)
+                {
+                    if (arr[k] > arr[k + 1])
+                    {
+                        temp = arr[k];
+                        arr[k] = arr[k + 1];
+                        arr[k + 1] = temp;
+                    }
+                }
+            }
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();*/
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            Console.WriteLine(sum);
+            sum = 0;
             
-            /*for (int i = 5; i > 1; i--)
+            foreach (var item in arr)
             {
-                Console.WriteLine("Iteration {0}", i);
-                var color = Console.ReadLine();
-                
-                switch (color)
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет красный!");
-                        break;
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш чвет зеленый!");
-                        break;
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет бирюзовай!");
-                        break;
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Ваш цвет желтый!");
-                        break;
-                }
-            }*/
-            int t = 0;
-            int k = 0;
-            Console.WriteLine("Цикл do...While:");
-            do
-            {
-                Console.WriteLine(t);
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                var color = Console.ReadLine();
-                switch (color)
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет красный!");
-                        break;
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш чвет зеленый!");
-                        break;
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет бирюзовай!");
-                        break;
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Ваш цвет желтый!");
-                        break;
-                }
-                if(color == "stop")
-                {
-                    Console.WriteLine("Ваш цикл остановлен!");
-                    break;
-                }
-                t++;
-            } while (true);
-            /*Console.WriteLine("Цикл While:");
-            while (k < 3)
-            {
-                Console.WriteLine(k);
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                switch (Console.ReadLine())
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет красный!");
-                        break;
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш чвет зеленый!");
-                        break;
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("Ваш цвет бирюзовай!");
-                        break;
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Ваш цвет желтый!");
-                        break;
-                }
-                k++;
-            }*/
+                sum += item;
+            }
+            Console.WriteLine(sum);
         }
     }
 }
