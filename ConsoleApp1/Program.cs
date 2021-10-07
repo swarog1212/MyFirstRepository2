@@ -6,35 +6,42 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Задание 4.3.14
-            int[][] array = new int[3][];
-            array[0] = new int[2] { 1, 2 };
-            array[1] = new int[3] { 1, 2, 3 };
-            array[2] = new int[5] { 1, 2, 3, 4, 5 };
-            foreach (var item in array)
-            {
-                foreach (var itemArray in item)
-                {
-                    Console.Write(itemArray + " ");
-                }
-            }
-            // Задание 4.3.15
-            int[] arr = new int[] { 5, -6, 3, 89, -34, -46, 8, -87, 45 };
-            int numbers = 0;
-            Console.WriteLine("Массив из 8-и элементов:");
-            foreach (var item in arr)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
+            
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            var number = 0;
             foreach (var item in arr)
             {
                 if (item > 0)
                 {
-                    numbers++;
+                    number++;
                 }
             }
-            Console.WriteLine("Количество положительных чисел = " + numbers);
+            Console.WriteLine(number);
+            int[,] array = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            var temp = 0;
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < array.GetUpperBound(1) + 1; j++)
+                {
+                    for (int k = j + 1; k < array.GetUpperBound(1) +1; k++)
+                    {
+                        if (array[i, j] > array[i, k])
+                        {
+                            temp = array[i, j];
+                            array[i, j] = array[i, k];
+                            array[i, k] = temp;
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < array.GetUpperBound(1) + 1; j++)
+                {
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
